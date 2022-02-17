@@ -8,9 +8,10 @@
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, blue, green);
+    background: linear-gradient(to right, rgb(78, 17, 119), rgb(192, 176, 37));
+    background-image: url('sunset.jpg');
 }
-.calculator-grid {
+.calculator-keys {
     display: grid;
     justify-content: center;
     align-content: center;
@@ -18,22 +19,24 @@ body {
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
-.calculator-grid > button {
+.calculator-keys > button {
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid whitesmoke;
+    border: 1px solid rgb(80, 75, 75);
     outline: none;
     background-color: grey;
+    border-radius: 25px;
 }
-.calculator-grid > button:hover {
-    background-color: wheat;
+.calculator-keys > button:hover {
+    background-color: rgb(71, 69, 65);
 }
 .span-two {
     grid-column: span 2;
 }
-.output {
+.calculator-output {
     grid-column: 1 / -1;
-    background-color: rgba(65, 59, 59, 0.616);
+    background-color: rgba(0, 0, 0, 0.616);
+    border-radius: 25px;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -42,11 +45,11 @@ body {
     word-wrap: break-word;
     word-break: break-all;
 }
-.output .previous-operand {
-    color: lime;
-    font-size: 1.5rem;   
+.calculator-output .previous-operand {
+    color: rgb(190, 181, 45);
+    font-size: 1.5rem;    
 }
-.output .current-operand {
-    color: limegreen;
+.calculator-output .current-operand {
+    color: rgb(245, 208, 87);
     font-size: 2.5rem;
 }
